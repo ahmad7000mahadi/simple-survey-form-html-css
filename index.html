@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Survey form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <header>
+  <h1 id="title">Self-Improvement Journey Form</h1>
+  <p id="description">The "Self-Improvement Journey Form" survey is designed to collect essential information from users who are interested in self-development.</p>
+  </header>
+  <main>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal data</legend>
+        <label id="name-label" class="personal-label" for="name"> Name <input id="name" type="text" required placeholder="Jane Doe"></label>
+
+        <label id="email-label" class="personal-label" for="email"> Email <input id="email" type="email" required placeholder="janedoe@janedoe.com"></label>
+
+        <label id="number-label" class="personal-label" for="number"> Age <input id="number" type="number" required placeholder="19" min="18" max="99"></label>
+      </fieldset>
+      
+      <fieldset class="radio">
+        <legend>Gender</legend>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say">
+        <label for="prefer-not-to-say">Prefer not to say</label><br> 
+      </fieldset>
+
+      <fieldset class="checkbox">
+        <legend>Interests</legend>
+
+        <input type="checkbox" id="option1" name="options[]" value="option1">
+        <label for="option1">Sports and Fitness</label>
+
+        <input type="checkbox" id="option2" name="options[]" value="option2">
+        <label for="option2">Arts and Design</label>
+
+        <input type="checkbox" id="option3" name="options[]" value="option3">
+        <label for="option3">Health and Nutrition</label>
+
+        <input type="checkbox" id="option4" name="options[]" value="option4">
+        <label for="option4">Hobbies and Creativity</label>
+
+        <input type="checkbox" id="option5" name="options[]" value="option5">
+        <label for="option5">Science and Computer</label>
+      </fieldset>
+
+      <fieldset>
+        <label>Current Focus
+        <select id="dropdown" class="select">
+          <option value="">[Select one]</option>
+          <option value="option1">Personal Growth</option>
+          <option value="option2">Health and Wellness</option>
+          <option value="option3">Professional Development</option>
+          <option value="option4">Relationships</option>
+        </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Tell us more about yourself   </legend>
+        <label class="textarea-label"></label>
+          <textarea class="textarea" rows="4" placeholder="I am..."></textarea>
+      </fieldset>
+
+      <input id="submit" type="submit" value="Submit">    
+      </form>
+  </main>
+</body>
+</html>
